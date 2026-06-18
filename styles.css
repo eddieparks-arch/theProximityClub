@@ -216,7 +216,7 @@ img { max-width: 100%; display: block; }
 h1, h2, h3 { margin: 0; line-height: 1.05; }
 h1, h2 { font-family: "Playfair Display", serif; font-weight: 600; }
 h1 {
-  font-size: clamp(3.05rem, 5.2vw, 5rem);
+  font-size: clamp(3.05rem, 3.2vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.05em;
   max-width: 560px;
