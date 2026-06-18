@@ -375,7 +375,7 @@ h3 { font-size: 1.2rem; }
   z-index: 2;
   background:
     linear-gradient(90deg, rgba(3,7,12,.98) 0%, rgba(3,7,12,.82) 42%, rgba(3,7,12,.44) 100%),
-    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.9) 18%, transparent 52%);
+    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.9) 18%, transparent 12%);
   pointer-events: none;
 }
 
