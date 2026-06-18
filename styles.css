@@ -45,12 +45,12 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 10px clamp(20px, 5vw, 72px);
-  background: rgba(3, 7, 12, 0.82);
-  border-bottom: 1px solid rgba(214, 173, 103, 0.16);
+  padding: 14px clamp(28px, 5vw, 76px);
+  background: rgba(3, 7, 12, 0.88);
+  border-bottom: 1px solid rgba(214, 173, 103, 0.18);
   backdrop-filter: blur(16px);
   overflow: visible;
-  min-height: 78px;
+  min-height: 76px;
 }
 
 .brand {
@@ -61,50 +61,59 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
   position: relative;
   z-index: 30;
+}
+
+.brand-overlap {
   align-self: flex-start;
+  margin-top: -6px;
+  margin-bottom: -38px;
+}
+
+.brand-wordmark {
+  transform: translateY(-1px);
+}
+
+.brand-tpc {
+  font-family: "Playfair Display", serif;
+  color: var(--gold-light);
+  font-size: clamp(2.1rem, 3.6vw, 3.15rem);
+  line-height: 0.9;
+  letter-spacing: -0.075em;
 }
 .brand-logo {
   display: block;
-  width: 88px;
+  width: 132px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 14px 34px rgba(0, 0, 0, 0.38));
+  transform: translateY(2px);
+  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.52));
   position: relative;
   z-index: 31;
 }
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 74px;
-  height: 74px;
-  border: 1px solid rgba(240, 210, 140, 0.55);
+.brand-divider {
+  width: 1px;
+  height: 34px;
+  background: var(--gold);
+  opacity: 0.58;
+}
+.brand-name {
   color: var(--gold-light);
-  font-family: "Playfair Display", serif;
-  font-size: 1.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
   font-weight: 700;
-  letter-spacing: -0.06em;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.005)),
-    rgba(3, 7, 12, 0.74);
-  box-shadow:
-    0 18px 42px rgba(0, 0, 0, 0.42),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
-  transform: translateY(-2px);
-  position: relative;
-  z-index: 31;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
 
-.footer-logo {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  color: var(--gold);
-  letter-spacing: -0.05em;
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
-.brand-divider { width: 1px; height: 34px; background: var(--gold); opacity: 0.65; }
-.brand-name { color: var(--gold); text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; font-size: 0.84rem; }
-
-.site-nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 42px); font-size: 0.78rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.14em; }
 .site-nav a { color: var(--cream); opacity: 0.86; transition: color .2s ease, opacity .2s ease; }
 .site-nav a:hover { color: var(--gold); opacity: 1; }
 .nav-toggle { display: none; background: none; color: var(--cream); border: 1px solid var(--line); font-size: 1.4rem; padding: 6px 10px; }
@@ -157,10 +166,10 @@ img { max-width: 100%; display: block; }
 
 .hero {
   position: relative;
-  min-height: calc(100vh - 89px);
+  min-height: 585px;
   display: flex;
   align-items: center;
-  padding: 88px clamp(28px, 7vw, 108px) 64px;
+  padding: 94px clamp(32px, 6vw, 76px) 64px;
   overflow: hidden;
   isolation: isolate;
   margin-bottom: -1px;
@@ -175,23 +184,23 @@ img { max-width: 100%; display: block; }
 .hero::after {
   content: "";
   position: absolute;
-  inset: 22px;
-  border: 1px solid rgba(214, 173, 103, 0.18);
-  background: linear-gradient(180deg, transparent 58%, rgba(3, 7, 12, 0.72) 84%, var(--navy-950) 100%);
-  box-shadow: inset 0 -160px 120px rgba(3, 7, 12, 0.82);
+  inset: 0;
+  border: none;
+  background: linear-gradient(180deg, transparent 70%, rgba(3, 7, 12, 0.38) 86%, var(--navy-950) 100%);
+  box-shadow: inset 0 -82px 80px rgba(3, 7, 12, 0.52);
   pointer-events: none;
   z-index: 3;
 }
 .hero-content {
   position: relative;
-  max-width: 760px;
-  padding-left: clamp(0px, 2vw, 30px);
+  max-width: 520px;
+  padding-left: 0;
   z-index: 4;
 }
 .hero-content::before {
   content: "";
   display: block;
-  width: 74px;
+  width: 58px;
   height: 1px;
   margin-bottom: 22px;
   background: linear-gradient(90deg, var(--gold-light), transparent);
@@ -199,7 +208,7 @@ img { max-width: 100%; display: block; }
 .eyebrow {
   color: var(--gold-light);
   text-transform: uppercase;
-  letter-spacing: .28em;
+  letter-spacing: .22em;
   font-weight: 800;
   font-size: .72rem;
   margin: 0 0 10px;
@@ -207,35 +216,47 @@ img { max-width: 100%; display: block; }
 h1, h2, h3 { margin: 0; line-height: 1.05; }
 h1, h2 { font-family: "Playfair Display", serif; font-weight: 600; }
 h1 {
-  font-size: clamp(3.65rem, 7.2vw, 6.9rem);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
+  font-size: clamp(3.05rem, 5.2vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  max-width: 560px;
+}
+
+h1 span {
+  display: block;
 }
 h2 { font-size: clamp(2.2rem, 5vw, 4rem); letter-spacing: -0.04em; }
 h3 { font-size: 1.2rem; }
 .hero-tagline {
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.28rem, 2.4vw, 1.85rem);
-  line-height: 1.18;
-  margin-top: 28px;
+  font-size: clamp(1.08rem, 1.65vw, 1.35rem);
+  line-height: 1.2;
+  margin-top: 30px;
   color: var(--cream);
 }
 .hero-copy {
-  color: var(--muted);
-  max-width: 600px;
-  font-size: 1rem;
-  margin-top: 16px;
+  color: rgba(248, 239, 224, 0.82);
+  max-width: 460px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-top: 14px;
 }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 22px;
   margin-top: 28px;
+  align-items: center;
 }
 
-.mission, .events, .values { padding: 108px 0; }
-.mission { padding-top: 132px; }
-.two-column { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 7vw, 90px); align-items: center; }
+.mission, .events, .values { padding: 84px 0; }
+.mission { padding-top: 72px; }
+.two-column {
+  display: grid;
+  grid-template-columns: .95fr 1.15fr;
+  gap: clamp(38px, 7vw, 86px);
+  align-items: center;
+}
 .mission-copy p:not(.eyebrow) { color: var(--muted); max-width: 520px; font-size: 1.04rem; }
 .text-link { display: inline-flex; gap: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; font-size: .8rem; margin-top: 18px; }
 .feature-card {
@@ -366,7 +387,7 @@ h3 { font-size: 1.2rem; }
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: saturate(0.75) contrast(1.08) brightness(0.78);
+  filter: saturate(1.02) contrast(1.02) brightness(1.08);
 }
 
 .hero-overlay {
@@ -374,8 +395,8 @@ h3 { font-size: 1.2rem; }
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(3,7,12,.98) 0%, rgba(3,7,12,.82) 42%, rgba(3,7,12,.44) 100%),
-    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.9) 18%, transparent 12%);
+    linear-gradient(90deg, rgba(3,7,12,.92) 0%, rgba(3,7,12,.78) 34%, rgba(3,7,12,.36) 62%, rgba(3,7,12,.14) 100%),
+    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.55) 19%, transparent 48%);
   pointer-events: none;
 }
 
@@ -386,11 +407,11 @@ h3 { font-size: 1.2rem; }
   .site-nav.open { display: grid; gap: 16px; padding: 16px 0; }
   .header-cta.open { display: inline-flex; width: max-content; }
   .two-column, .event-grid, .membership-content, .values-grid, .footer-shell { grid-template-columns: 1fr; }
-  .hero { min-height: calc(100vh - 89px); padding: 88px 28px 64px; }
+  .hero { min-height: 620px; padding: 76px 28px 64px; }
   .hero::after { inset: 14px; }
-  h1 { font-size: clamp(3.4rem, 16vw, 5.2rem); }
+  h1 { font-size: clamp(3.2rem, 14vw, 4.8rem); }
   .newsletter { flex-direction: column; gap: 10px; }
   .newsletter button { min-height: 44px; }
-  .brand-logo { width: 78px; }
-  .brand-mark { width: 64px; height: 64px; font-size: 1.58rem; transform: translateY(-1px); }
+  .brand-overlap { margin-top: -4px; margin-bottom: -28px; }
+  .brand-logo { width: 104px; transform: translateY(24px); }
 }
