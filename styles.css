@@ -45,12 +45,12 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 14px max(28px, calc((100vw - 1120px) / 2));
+  padding: 8px max(28px, calc((100vw - 1120px) / 2));
   background: rgba(3, 7, 12, 0.88);
   border-bottom: 1px solid rgba(214, 173, 103, 0.18);
   backdrop-filter: blur(16px);
   overflow: visible;
-  min-height: 76px;
+  min-height: 60px;
 }
 
 .brand {
@@ -82,7 +82,7 @@ img { max-width: 100%; display: block; }
 }
 .brand-logo {
   display: block;
-  width: 132px;
+  width: 105px;
   height: auto;
   object-fit: contain;
   transform: translateY(2px);
@@ -118,38 +118,40 @@ img { max-width: 100%; display: block; }
 .site-nav a:hover { color: var(--gold); opacity: 1; }
 .nav-toggle { display: none; background: none; color: var(--cream); border: 1px solid var(--line); font-size: 1.4rem; padding: 6px 10px; }
 
-.header-cta, .btn {
+ .header-cta, .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 44px;
-  padding: 0 22px;
+  min-height: 46px;
+  padding: 0 24px;
   text-transform: uppercase;
-  letter-spacing: 0.13em;
-  font-weight: 800;
-  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  font-size: 0.72rem;
   transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease, color .2s ease;
 }
 .header-cta, .btn-primary {
-  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
-  color: #06101a;
-  border: 1px solid rgba(240, 210, 140, 0.7);
-  box-shadow: 0 14px 34px rgba(143, 100, 45, 0.26);
+  background: #c8a24a;
+  color: #07111f;
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
 }
 .btn:hover, .header-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 18px 44px rgba(143, 100, 45, 0.34);
+  transform: translateY(-1px);
+  background: #d6ad67;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.22);
 }
 .btn-ghost {
   color: var(--cream);
-  border: 1px solid rgba(248, 239, 224, 0.22);
-  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.03);
   backdrop-filter: blur(10px);
 }
 .btn-ghost:hover {
-  border-color: rgba(214, 173, 103, 0.55);
+  border-color: var(--gold);
   color: var(--gold-light);
+  background: rgba(214,173,103,0.06);
 }
 .btn-outline {
   border: 1px solid rgba(214, 173, 103, 0.68);
@@ -553,7 +555,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: saturate(1.02) contrast(1.02) brightness(1.08);
+  filter: saturate(1.08) contrast(1.01) brightness(1.18);
 }
 
 .hero-overlay {
@@ -561,8 +563,8 @@ h3 {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(3,7,12,.92) 0%, rgba(3,7,12,.78) 34%, rgba(3,7,12,.36) 62%, rgba(3,7,12,.14) 100%),
-    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.55) 19%, transparent 48%);
+    linear-gradient(90deg, rgba(3,7,12,.82) 0%, rgba(3,7,12,.64) 34%, rgba(3,7,12,.26) 62%, rgba(3,7,12,.08) 100%),
+    linear-gradient(0deg, var(--navy-950) 0%, rgba(3,7,12,.42) 19%, transparent 52%);
   pointer-events: none;
 }
 
