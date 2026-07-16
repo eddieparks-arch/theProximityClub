@@ -20,14 +20,14 @@
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
+      <a href="#home" aria-current="page">Home</a>
+      <a href="about.html">About</a>
       <a href="#events">Events</a>
-      <a href="#membership">Membership</a>
-      <a href="#contact">Contact</a>
+      <a href="business-directory.html">Business Directory</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <a class="header-cta" href="#membership">Join the Club</a>
+    <a class="header-cta" href="join.html">Join the Club</a>
   </header>
 
   <main>
@@ -42,11 +42,86 @@
         <p class="hero-tagline">Where proximity creates opportunity.</p>
         <p class="hero-copy">A curated network for ambitious professionals, entrepreneurs, and leaders who believe that who you know can take you further than what you know.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#membership">Join the Club</a>
-          <a class="btn btn-ghost" href="#about">Learn More <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="join.html">Join the Club</a>
+          
         </div>
       </div>
     </section>
+
+    <!-- Calendar section: add calendar-section--empty to this section for the built-in empty state. -->
+    <section id="events" class="events calendar-section section-dark" aria-labelledby="calendar-heading">
+      <div class="section-shell reveal">
+        <div class="calendar-feature-layout">
+          <header class="calendar-header">
+            <p class="eyebrow">Calendar</p>
+            <div class="calendar-heading-rule" aria-hidden="true"><span></span></div>
+            <h2 id="calendar-heading">Upcoming Experiences</h2>
+            <p>We gather with purpose. From intimate networking mixers to member roundtables, every event is designed to create meaningful connections.</p>
+          </header>
+
+          <!-- Update the event date, title, location, time, and reservation link in this card. -->
+          <article class="calendar-event-card">
+          <div class="calendar-date">
+            <p class="calendar-event-label calendar-scheduled-content">Next Event</p>
+            <p class="calendar-event-label calendar-empty-content">Next Invitation</p>
+            <div class="calendar-date-rule" aria-hidden="true"></div>
+            <time class="calendar-scheduled-content" datetime="2026-07-16T18:00:00-05:00">
+              <span class="calendar-month">July</span>
+              <span class="calendar-day">16</span>
+            </time>
+            <p class="calendar-coming-soon calendar-empty-content">Coming Soon</p>
+          </div>
+
+          <div class="calendar-event-details">
+            <h3 class="calendar-scheduled-content">Soft Launch Happy Hour</h3>
+            <h3 class="calendar-empty-content">Our next experience is being thoughtfully curated.</h3>
+            <div class="calendar-event-meta calendar-scheduled-content">
+              <p>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <span>Privilege <b aria-hidden="true">•</b> Houston, Texas</span>
+              </p>
+              <p>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                <time datetime="2026-07-16T18:00:00-05:00">6:00 PM</time>
+              </p>
+            </div>
+            <p class="calendar-empty-copy calendar-empty-content">Stay connected to receive event announcements and invitations.</p>
+            <a class="calendar-event-cta calendar-scheduled-content" href="mailto:info@theproximityclub.com?subject=Soft%20Launch%20Happy%20Hour%20Reservation">Reserve Your Spot <span aria-hidden="true">→</span></a>
+            <a class="calendar-event-cta calendar-empty-content" href="contact.html">Stay Connected <span aria-hidden="true">→</span></a>
+          </div>
+
+            <svg class="calendar-celebration" viewBox="0 0 180 220" aria-hidden="true">
+              <path d="M68 49 46 43 28 102c-8 28 7 48 25 51l-15 46m8 0H27m39-150 22-6 18 59c8 28-7 48-25 51l15 46m-8 0h19M33 92c13 8 28 9 45 3m24-3c-13 8-28 9-45 3"/>
+              <path class="calendar-spark" d="M90 8v28M76 22h28M81 13l18 18M99 13 81 31"/>
+            </svg>
+          </article>
+        </div>
+
+        <div class="calendar-experience-divider" aria-hidden="true"><span></span></div>
+
+        <div class="calendar-experiences" aria-label="Types of experiences">
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="16" cy="16" r="5"/><circle cx="32" cy="16" r="5"/><circle cx="24" cy="11" r="5"/><path d="M7 35v-8c0-4 4-7 9-7m25 15v-8c0-4-4-7-9-7M14 38V27c0-5 4-8 10-8s10 3 10 8v11Z"/></svg>
+            </div>
+            <div><h3>Networking Mixers</h3><p>Meaningful connections that drive opportunity.</p></div>
+          </article>
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="13" cy="15" r="4"/><circle cx="35" cy="15" r="4"/><circle cx="24" cy="11" r="5"/><path d="M6 32v-7c0-4 3-6 7-6m29 13v-7c0-4-3-6-7-6M15 27c0-5 4-8 9-8s9 3 9 8v9H15Z"/><ellipse cx="24" cy="33" rx="14" ry="5"/></svg>
+            </div>
+            <div><h3>Executive Roundtables</h3><p>Peer-to-peer conversations on what matters most.</p></div>
+          </article>
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="m5 19 19-11 19 11H5Zm4 20h30M12 22v13m8-13v13m8-13v13m8-13v13M7 19h34v4H7Z"/></svg>
+            </div>
+            <div><h3>Community Experiences</h3><p>Gatherings that strengthen business and our community.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- End Calendar section -->
 
     <section id="about" class="mission section-dark">
       <div class="section-shell mission-grid">
@@ -54,7 +129,7 @@
           <p class="eyebrow">Our Mission</p>
           <h2>Building meaningful relationships that move business and community forward.</h2>
           <p>The Proximity Club is a curated community that connects high-caliber professionals through exclusive events, intentional conversations, and shared opportunities.</p>
-          <a class="text-link" href="#membership">Learn More About Us <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="about.html">Learn More About Us <span aria-hidden="true">→</span></a>
         </div>
 
         <div class="mission-image-card reveal">
@@ -63,64 +138,34 @@
       </div>
     </section>
 
-    <section id="events" class="events section-dark">
-      <div class="section-shell reveal">
-        <p class="eyebrow center">Calendar Coming Soon</p>
-        <h2 class="center">Private gatherings are being shaped now.</h2>
-
-        <div class="event-placeholder reveal">
-          <div class="event-placeholder-main">
-            <p class="eyebrow">Upcoming Experiences</p>
-            <h3>Curated rooms for connection, conversation, and access.</h3>
-            <p>
-              We are building a thoughtful event calendar for professionals who value meaningful rooms, strong introductions, and conversations that move beyond business cards.
-            </p>
-            <div class="event-pill-row" aria-label="Planned event formats">
-              <span>Networking Mixers</span>
-              <span>Leadership Dinners</span>
-              <span>Member Roundtables</span>
-            </div>
-          </div>
-
-          <div class="event-placeholder-calendar" aria-hidden="true">
-            <span class="calendar-label">TPC</span>
-            <strong>Events</strong>
-            <em>Dates To Be Announced</em>
-          </div>
+    <section id="membership" class="membership-band community-band">
+      <div class="section-shell inclusion-layout reveal">
+        <div class="inclusion-intro">
+          <p class="eyebrow">Our Community</p>
+          <h2>Built on Real Connections. <span>Strengthened by Different Perspectives.</span></h2>
+          <p>The Proximity Club is a welcoming community of professionals from different industries, backgrounds, and experiences—brought together by a shared belief in meaningful relationships.</p>
         </div>
 
-        <div class="center button-row">
-          <a class="btn btn-outline" href="#membership">Join the Interest List</a>
+        <div class="inclusion-principles" aria-label="Our community principles">
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="18" cy="17" r="6"/><circle cx="32" cy="19" r="5"/><path d="M7 37c1-7 5-11 11-11s10 4 11 11M27 28c2-2 4-3 6-3 5 0 8 4 9 10"/></svg>
+            </span>
+            <div><h3>Open Community</h3><p>Professionals across industries, backgrounds, and experiences are welcomed with intention.</p></div>
+          </article>
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 39S8 30 8 18c0-5 4-9 9-9 3 0 6 2 7 5 2-3 4-5 8-5 5 0 8 4 8 9 0 12-16 21-16 21Z"/><path d="M17 22c2 3 4 5 7 6 3-1 5-3 7-6"/></svg>
+            </span>
+            <div><h3>Genuine Connection</h3><p>Thoughtful conversations create relationships grounded in trust, respect, and shared purpose.</p></div>
+          </article>
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M9 37h30M13 33l8-9 6 5 10-14"/><path d="M29 15h8v8"/><circle cx="13" cy="33" r="2"/><circle cx="21" cy="24" r="2"/><circle cx="27" cy="29" r="2"/></svg>
+            </span>
+            <div><h3>Shared Growth</h3><p>We exchange ideas, open doors, and create opportunities that help one another move forward.</p></div>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section id="membership" class="membership-band">
-      <div class="section-shell membership-content reveal">
-        <div class="membership-icon" aria-hidden="true">◎</div>
-        <h2>Now forming our founding member circle in Houston.</h2>
-        <p>Membership is by invitation or application only, created for professionals who value access, discretion, and meaningful connection.</p>
-        <a class="btn btn-primary" href="mailto:hello@theproximityclub.com?subject=Membership%20Interest%20-%20The%20Proximity%20Club">Apply for Membership</a>
-      </div>
-    </section>
-
-    <section class="values section-dark">
-      <div class="section-shell values-grid reveal">
-        <article>
-          <span>01</span>
-          <h3>Intentional Access</h3>
-          <p>Curated rooms designed for real conversations, not random business card exchanges.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Shared Growth</h3>
-          <p>A network where members bring opportunities, resources, and momentum to the table.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Elevated Events</h3>
-          <p>Professional gatherings with the polish, atmosphere, and detail your audience expects.</p>
-        </article>
       </div>
     </section>
   </main>
@@ -128,39 +173,33 @@
   <footer id="contact" class="site-footer">
     <div class="footer-shell">
       <div>
-        <div class="footer-logo">TPC</div>
         <p class="footer-brand">The Proximity Club</p>
         <p>Where proximity creates opportunity and relationships open the right doors.</p>
         <div class="social-row" aria-label="Social links">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="mailto:hello@theproximityclub.com" aria-label="Email">✉</a>
+          <a href="mailto:info@theproximityclub.com" aria-label="Email" title="Email The Proximity Club"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.2 7-5.2V7H5Zm14 10V9.9l-7 5.2-7-5.2V17h14Z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61591724949559" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Visit The Proximity Club on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.3c-.5-.1-2.2-.3-4.1-.3-4 0-6.7 2.4-6.7 6.9V15H2v4.1h4.2V24h5.1v-4.9h4.2l.7-4.1h-4.9v-3.7C11.3 10.1 11.7 8 14 8Z"/></svg></a>
+          <a href="https://www.instagram.com/theproximityclub?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Visit The Proximity Club on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="https://www.tiktok.com/@theproximityclub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Visit The Proximity Club on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h3.1c.2 1.8 1.3 3.2 3.2 3.6v3.2a8.2 8.2 0 0 1-3.2-1v6.3a6.1 6.1 0 1 1-5.2-6v3.3a2.9 2.9 0 1 0 2.1 2.8V3Z"/></svg></a>
+          <a href="https://www.youtube.com/@TheProximityClub" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Visit The Proximity Club on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"/></svg></a>
         </div>
       </div>
 
       <div>
         <h3>Quick Links</h3>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#events">Events</a>
-        <a href="#membership">Membership</a>
-        <a href="#contact">Contact</a>
+        <a href="business-directory.html">Business Directory</a>
+        <a href="join.html">Membership</a>
+        <a href="contact.html">Contact</a>
       </div>
 
       <div>
         <h3>Contact</h3>
         <p>Houston, Texas</p>
-        <p><a href="mailto:hello@theproximityclub.com">hello@theproximityclub.com</a></p>
+        <p><a href="mailto:info@theproximityclub.com">info@theproximityclub.com</a></p>
       </div>
 
-      <div>
-        <h3>Newsletter</h3>
-        <p>Receive upcoming event announcements and private club updates.</p>
-        <form class="newsletter" name="newsletter" onsubmit="return false;">
-          <input type="email" placeholder="Your email address" aria-label="Email address" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
     </div>
     <p class="copyright">© <span id="year"></span> The Proximity Club. All rights reserved.</p>
   </footer>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact The Proximity Club about membership, partnerships, events, and Houston's professional community." />
+  <meta name="theme-color" content="#03070c" />
+  <title>Contact Us | The Proximity Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <a class="brand brand-overlap" href="index_fullSite.html#home" aria-label="The Proximity Club Home">
+      <img class="brand-logo" src="assets/goldLogo.png" alt="The Proximity Club" />
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index_fullSite.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index_fullSite.html#events">Events</a>
+      <a href="business-directory.html">Business Directory</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="header-cta" href="join.html">Join the Club</a>
+  </header>
+
+  <main>
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <video class="contact-hero-video" autoplay muted loop playsinline aria-hidden="true"><source src="assets/websiteHomeVideo.mp4" type="video/mp4" /></video>
+      <div class="contact-hero-overlay"></div>
+      <div class="section-shell contact-hero-content reveal">
+        <h1 id="contact-title">Contact Us</h1>
+        <div class="contact-title-rule" aria-hidden="true"><span></span></div>
+        <p>We’d love to connect. Whether you have a question about membership, partnerships, or upcoming events, our team is here to help.</p>
+      </div>
+    </section>
+
+    <section class="contact-main-section">
+      <div class="section-shell contact-layout reveal">
+        <div class="contact-form-panel">
+          <header class="contact-panel-heading"><p class="eyebrow">Send Us a Message</p><span aria-hidden="true"></span></header>
+          <div class="contact-form-status is-success" data-fs-success></div>
+          <div class="contact-form-status is-error" data-fs-error></div>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrenepaw" method="post">
+            <input type="hidden" name="_subject" value="New message from The Proximity Club website" />
+            <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+            <div class="contact-form-row">
+              <label><span class="contact-label-text">Full Name <b aria-hidden="true">*</b></span><input type="text" name="name" placeholder="Your name" autocomplete="name" required data-fs-field /><span class="contact-field-error" data-fs-error="name"></span></label>
+              <label><span class="contact-label-text">Email Address <b aria-hidden="true">*</b></span><input type="email" name="email" placeholder="Your email" autocomplete="email" required data-fs-field /><span class="contact-field-error" data-fs-error="email"></span></label>
+            </div>
+            <label>Subject<select name="subject" data-fs-field><option value="">Select a topic</option><option>Membership</option><option>Business Directory</option><option>Partnerships</option><option>Events</option><option>General Question</option></select><span class="contact-field-error" data-fs-error="subject"></span></label>
+            <label><span class="contact-label-text">Your Message <b aria-hidden="true">*</b></span><textarea name="message" rows="5" placeholder="How can we help?" required data-fs-field></textarea><span class="contact-field-error" data-fs-error="message"></span></label>
+            <button class="contact-submit" type="submit" data-fs-submit-btn>Send Message <span aria-hidden="true">→</span></button>
+            <p class="contact-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>We’ll use your information only to respond to your inquiry.</p>
+          </form>
+        </div>
+
+        <aside class="contact-info-panel" aria-label="Contact details">
+          <article><div class="contact-info-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m4 7 8 6 8-6"/></svg></div><div><h2>Email Us</h2><a href="mailto:info@theproximityclub.com">info@theproximityclub.com</a></div></article>
+          <article><div class="contact-info-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><h2>Response Time</h2><p>We typically reply within<br />1–2 business days.</p></div></article>
+          <article><div class="contact-info-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><h2>Location</h2><p>Houston, Texas</p></div></article>
+          <div class="contact-help-box"><h2>Looking For Something?</h2><p>For quick answers about membership, events, or the directory, send us a note.</p><a href="mailto:info@theproximityclub.com?subject=Question%20for%20The%20Proximity%20Club">Ask a Question <span aria-hidden="true">→</span></a></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-shell">
+      <div>
+        <p class="footer-brand">The Proximity Club</p>
+        <p>Where proximity creates opportunity and relationships open the right doors.</p>
+        <div class="social-row" aria-label="Social links">
+          <a href="mailto:info@theproximityclub.com" aria-label="Email" title="Email The Proximity Club"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.2 7-5.2V7H5Zm14 10V9.9l-7 5.2-7-5.2V17h14Z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61591724949559" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Visit The Proximity Club on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.3c-.5-.1-2.2-.3-4.1-.3-4 0-6.7 2.4-6.7 6.9V15H2v4.1h4.2V24h5.1v-4.9h4.2l.7-4.1h-4.9v-3.7C11.3 10.1 11.7 8 14 8Z"/></svg></a>
+          <a href="https://www.instagram.com/theproximityclub?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Visit The Proximity Club on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="https://www.tiktok.com/@theproximityclub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Visit The Proximity Club on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h3.1c.2 1.8 1.3 3.2 3.2 3.6v3.2a8.2 8.2 0 0 1-3.2-1v6.3a6.1 6.1 0 1 1-5.2-6v3.3a2.9 2.9 0 1 0 2.1 2.8V3Z"/></svg></a>
+          <a href="https://www.youtube.com/@TheProximityClub" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Visit The Proximity Club on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Quick Links</h3><a href="index_fullSite.html#home">Home</a><a href="about.html">About</a><a href="index_fullSite.html#events">Events</a><a href="business-directory.html">Business Directory</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
+      <div><h3>Contact</h3><p>Houston, Texas</p><p><a href="mailto:info@theproximityclub.com">info@theproximityclub.com</a></p></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> The Proximity Club. All rights reserved.</p>
+  </footer>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree("initForm", { formElement: "#contact-form", formId: "xrenepaw" });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

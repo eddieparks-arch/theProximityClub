@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join The Proximity Club, a Houston community built around authentic professional relationships and meaningful opportunities." />
+  <meta name="theme-color" content="#03070c" />
+  <title>Join The Proximity Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="join-page">
+  <header class="site-header">
+    <a class="brand brand-overlap" href="index_fullSite.html#home" aria-label="The Proximity Club Home">
+      <img class="brand-logo" src="assets/goldLogo.png" alt="The Proximity Club" />
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index_fullSite.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index_fullSite.html#events">Events</a>
+      <a href="business-directory.html">Business Directory</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="join.html" aria-current="page">Join the Club</a>
+  </header>
+
+  <main>
+    <!-- Join The Proximity Club form -->
+    <section class="join-section" aria-labelledby="join-title">
+      <div class="section-shell join-shell reveal">
+        <header class="join-intro">
+          <p class="eyebrow">Join The Proximity Club</p>
+          <div class="join-ornament" aria-hidden="true"><span></span><b></b><span></span></div>
+          <h1 id="join-title">Become part of<br />something meaningful.</h1>
+          <p class="join-welcome">We’re excited to learn more about you.</p>
+          <p>We’re building a community of professionals, entrepreneurs, creatives, and leaders who value authentic relationships and meaningful opportunities.</p>
+          <p>Complete the form below and we’ll reach out with more information about membership and upcoming events.</p>
+        </header>
+
+        <div class="join-form-panel">
+          <div class="contact-form-status is-success" data-fs-success></div>
+          <div class="contact-form-status is-error" data-fs-error></div>
+          <form id="join-form" class="join-form" action="https://formspree.io/f/xkodobpw" method="post">
+          <input type="hidden" name="_subject" value="New membership interest from The Proximity Club website" />
+          <label class="contact-honeypot" aria-hidden="true">Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+
+          <div class="join-form-row">
+            <label><span>First Name <b aria-hidden="true">*</b></span><input type="text" name="first_name" placeholder="First Name" autocomplete="given-name" required data-fs-field /><small data-fs-error="first_name"></small></label>
+            <label><span>Last Name <b aria-hidden="true">*</b></span><input type="text" name="last_name" placeholder="Last Name" autocomplete="family-name" required data-fs-field /><small data-fs-error="last_name"></small></label>
+          </div>
+
+          <label><span>Email Address <b aria-hidden="true">*</b></span><input type="email" name="email" placeholder="Email Address" autocomplete="email" required data-fs-field /><small data-fs-error="email"></small></label>
+
+          <div class="join-form-row">
+            <label><span>Phone Number <em>(Optional)</em></span><input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" data-fs-field /><small data-fs-error="phone"></small></label>
+            <label><span>Profession / Industry</span><input type="text" name="profession" placeholder="Profession / Industry" autocomplete="organization-title" data-fs-field /><small data-fs-error="profession"></small></label>
+          </div>
+
+          <label><span>What interests you about joining?</span><textarea name="message" rows="4" placeholder="Tell us a little about yourself..." data-fs-field></textarea><small data-fs-error="message"></small></label>
+
+          <button class="join-submit" type="submit" data-fs-submit-btn>Join the Club<span aria-hidden="true">→</span></button>
+            <p class="join-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="1"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Your information will only be used to contact you about The Proximity Club.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- End Join The Proximity Club form -->
+
+    <section class="member-experience-section about-page section-dark">
+      <div class="section-shell reveal">
+        <div class="section-heading centered dark-heading">
+          <p class="eyebrow">What Members Experience</p>
+          <h2>Membership that goes beyond introductions.</h2>
+          <p class="experience-intro">Build meaningful relationships, expand your influence, and create opportunities that continue beyond each event.</p>
+        </div>
+        <div class="experience-editorial">
+          <article class="experience-featured">
+            <span class="experience-featured-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="17" cy="17" r="5"/><circle cx="31" cy="17" r="5"/><path d="M7 37v-7c0-5 4-8 10-8s10 3 10 8v7M27 25c1-2 3-3 6-3 5 0 8 3 8 8v7"/></svg></span>
+            <h3>Meaningful Connections</h3>
+            <p>Build relationships with professionals, entrepreneurs, and community leaders who value genuine connection.</p>
+            <small>At the heart of every gathering.</small>
+          </article>
+          <div class="experience-feature-list">
+            <article class="experience-feature-item"><span class="experience-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="10" width="34" height="31" rx="2"/><path d="M15 6v8m18-8v8M7 19h34M15 27h5m8 0h5M15 34h5m8 0h5"/></svg></span><div><h3>Curated Events</h3><p>Intentional gatherings designed to spark genuine conversation and lasting connection.</p></div></article>
+            <article class="experience-feature-item"><span class="experience-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m24 7 5 11 12 1.5-9 8 2.5 12L24 33.5 13.5 39.5l2.5-12-9-8L19 18l5-11Z"/></svg></span><div><h3>Leadership Growth</h3><p>Fresh perspectives and thoughtful programming that strengthen how you lead.</p></div></article>
+            <article class="experience-feature-item"><span class="experience-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m8 21 8-7 9 8-8 8-9-9Zm32 0-8-7-9 8 8 8 9-9Z"/><path d="m17 30 7 7 7-7M12 26l-5 5 8 8 5-5m16-8 5 5-8 8-5-5"/></svg></span><div><h3>Strategic Partnerships</h3><p>Relationships that open doors to meaningful collaboration and shared opportunity.</p></div></article>
+            <article class="experience-feature-item"><span class="experience-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m24 6 18 10v16L24 42 6 32V16L24 6Z"/><circle cx="24" cy="22" r="6"/><path d="M14 34c2-5 5-7 10-7s8 2 10 7"/></svg></span><div><h3>Community Impact</h3><p>Opportunities to contribute, serve, and help strengthen the community around us.</p></div></article>
+            <article class="experience-feature-item"><span class="experience-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39h32M12 34l9-10 7 5 10-14"/><path d="M29 15h9v9"/></svg></span><div><h3>Personal &amp; Professional Growth</h3><p>Broaden your influence, sharpen your skills, and move forward with confidence.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-shell">
+      <div>
+        <p class="footer-brand">The Proximity Club</p>
+        <p>Where proximity creates opportunity and relationships open the right doors.</p>
+        <div class="social-row" aria-label="Social links">
+          <a href="mailto:info@theproximityclub.com" aria-label="Email" title="Email The Proximity Club"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.2 7-5.2V7H5Zm14 10V9.9l-7 5.2-7-5.2V17h14Z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61591724949559" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Visit The Proximity Club on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.3c-.5-.1-2.2-.3-4.1-.3-4 0-6.7 2.4-6.7 6.9V15H2v4.1h4.2V24h5.1v-4.9h4.2l.7-4.1h-4.9v-3.7C11.3 10.1 11.7 8 14 8Z"/></svg></a>
+          <a href="https://www.instagram.com/theproximityclub?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Visit The Proximity Club on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="https://www.tiktok.com/@theproximityclub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Visit The Proximity Club on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h3.1c.2 1.8 1.3 3.2 3.2 3.6v3.2a8.2 8.2 0 0 1-3.2-1v6.3a6.1 6.1 0 1 1-5.2-6v3.3a2.9 2.9 0 1 0 2.1 2.8V3Z"/></svg></a>
+          <a href="https://www.youtube.com/@TheProximityClub" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Visit The Proximity Club on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Quick Links</h3><a href="index_fullSite.html#home">Home</a><a href="about.html">About</a><a href="index_fullSite.html#events">Events</a><a href="business-directory.html">Business Directory</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
+      <div><h3>Contact</h3><p>Houston, Texas</p><p><a href="mailto:info@theproximityclub.com">info@theproximityclub.com</a></p></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> The Proximity Club. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree("initForm", { formElement: "#join-form", formId: "xkodobpw" });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="script.js"></script>
+</body>
+</html>

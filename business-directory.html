@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore businesses and services within The Proximity Club professional community." />
+  <meta name="theme-color" content="#03070c" />
+  <title>Business Directory | The Proximity Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="directory-page">
+  <header class="site-header">
+    <a class="brand brand-overlap" href="index_fullSite.html#home" aria-label="The Proximity Club Home">
+      <img class="brand-logo" src="assets/goldLogo.png" alt="The Proximity Club" />
+    </a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index_fullSite.html#home">Home</a>
+      <a href="about.html">About</a>
+      <a href="index_fullSite.html#events">Events</a>
+      <a href="business-directory.html" aria-current="page">Business Directory</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="join.html">Join the Club</a>
+  </header>
+
+  <main>
+    <section class="directory-page-hero">
+      <img class="directory-hero-image" src="assets/business-directory-hero.png" alt="Houston skyline viewed from an elegant private lounge" />
+      <div class="section-shell directory-page-hero-content reveal">
+        <p class="eyebrow">The Proximity Club</p>
+        <h1><span>Business</span><span>Directory.</span></h1>
+        <div class="directory-hero-rule" aria-hidden="true"></div>
+        <p>Showcase your business to Houston’s most connected network of professionals, entrepreneurs, and decision makers.</p>
+        <div class="directory-hero-actions">
+          <a class="btn btn-primary" href="mailto:info@theproximityclub.com?subject=Business%20Directory%20Interest">Reserve Your Spot</a>
+          <a class="btn btn-outline" href="#directory-membership">View Membership Options</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="founding-partners" aria-labelledby="founding-title">
+      <div class="section-shell reveal">
+        <div class="directory-section-title"><h2 id="founding-title">Early Adopters</h2></div>
+        <div class="founding-grid">
+          <a class="founding-card" href="#member-morrow"><div class="partner-mark">M</div><h3>Morrow &amp; Co.</h3><p>Real Estate</p><span>Sample Listing</span></a>
+          <a class="founding-card" href="#member-verde"><div class="partner-mark">V</div><h3>Verde Capital</h3><p>Financial Services</p><span>Sample Listing</span></a>
+          <a class="founding-card" href="#member-arden"><div class="partner-mark">AN</div><h3>Arden North</h3><p>Strategy &amp; Consulting</p><span>Sample Listing</span></a>
+          <a class="founding-card" href="#member-oak"><div class="partner-mark partner-mark-tree">♧</div><h3>Oak &amp; Linden</h3><p>Hospitality</p><span>Sample Listing</span></a>
+          <a class="founding-card" href="#member-kindred"><div class="partner-mark">K</div><h3>Kindred House</h3><p>Creative Studio</p><span>Sample Listing</span></a>
+          <a class="founding-card" href="#member-crescent"><div class="partner-mark">CW</div><h3>Crescent Works</h3><p>Business Services</p><span>Sample Listing</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="directory-listing-section" aria-labelledby="directory-listing-title">
+      <div class="section-shell">
+        <div class="directory-tools reveal">
+          <label class="directory-search"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span><span class="sr-only">Search directory</span><input type="search" id="directory-search" placeholder="Search businesses or members..." /></label>
+          <div class="directory-filters" aria-label="Filter businesses by industry">
+            <button type="button" class="directory-filter active" data-directory-filter="all" aria-pressed="true">All Businesses</button>
+            <button type="button" class="directory-filter" data-directory-filter="consulting" aria-pressed="false">Consulting</button>
+            <button type="button" class="directory-filter" data-directory-filter="real-estate" aria-pressed="false">Real Estate</button>
+            <button type="button" class="directory-filter" data-directory-filter="finance" aria-pressed="false">Finance</button>
+            <button type="button" class="directory-filter" data-directory-filter="creative" aria-pressed="false">Creative</button>
+            <button type="button" class="directory-filter" data-directory-filter="hospitality" aria-pressed="false">Hospitality</button>
+          </div>
+        </div>
+
+        <div class="directory-listing-grid reveal" aria-live="polite">
+          <article id="member-morrow" class="directory-card directory-early-card" data-directory-category="real-estate"><div class="member-mark">M</div><h3>Morrow &amp; Co.</h3><p class="directory-industry">Real Estate</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="member-verde" class="directory-card directory-early-card" data-directory-category="finance"><div class="member-mark member-mark-gold">V</div><h3>Verde Capital</h3><p class="directory-industry">Financial Services</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="member-arden" class="directory-card directory-early-card" data-directory-category="consulting"><div class="member-mark">AN</div><h3>Arden North</h3><p class="directory-industry">Strategy &amp; Consulting</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="member-oak" class="directory-card directory-early-card" data-directory-category="hospitality"><div class="member-mark member-mark-gold">♧</div><h3>Oak &amp; Linden</h3><p class="directory-industry">Hospitality</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="member-kindred" class="directory-card directory-early-card" data-directory-category="creative"><div class="member-mark">K</div><h3>Kindred House</h3><p class="directory-industry">Creative Studio</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="member-crescent" class="directory-card directory-early-card" data-directory-category="consulting"><div class="member-mark member-mark-gold">CW</div><h3>Crescent Works</h3><p class="directory-industry">Business Services</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Early Adopter</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="consulting"><div class="member-mark">SV</div><h3>Southview Partners</h3><p class="directory-industry">Leadership Consulting</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="consulting"><div class="member-mark member-mark-gold">△</div><h3>Summit Legal</h3><p class="directory-industry">Legal Services</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="creative"><div class="member-mark">B</div><h3>Brightline</h3><p class="directory-industry">Marketing Agency</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="finance"><div class="member-mark">HW</div><h3>Heights Wealth</h3><p class="directory-industry">Wealth Management</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="hospitality"><div class="member-mark member-mark-gold">A</div><h3>Atelier Events</h3><p class="directory-industry">Event Planning</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="finance"><div class="member-mark member-mark-blue">★</div><h3>Lone Star Lending</h3><p class="directory-industry">Mortgage Services</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="real-estate"><div class="member-mark">MA</div><h3>Modus Architects</h3><p class="directory-industry">Architecture</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article class="directory-card" data-directory-category="hospitality"><div class="member-mark member-mark-gold">♧</div><h3>Well Rooted</h3><p class="directory-industry">Wellness Studio</p><p class="member-location">Houston, Texas</p><span class="directory-location">Sample Listing</span><a href="#directory-membership">Preview Listing →</a></article>
+          <article id="directory-membership" class="directory-card directory-open-card" data-directory-category="all"><div class="member-mark">+</div><h3>Your Logo<br />Could Be Here</h3><a class="btn btn-primary" href="mailto:info@theproximityclub.com?subject=Business%20Directory%20Interest">Reserve Your Spot</a></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Directory listing preview modal -->
+  <dialog class="directory-preview-modal" id="directory-preview-modal" aria-labelledby="directory-preview-title">
+    <div class="directory-preview-panel">
+      <button class="directory-preview-close" type="button" aria-label="Close listing preview">×</button>
+      <p class="directory-preview-eyebrow">Sample Directory Listing</p>
+      <div class="directory-preview-identity">
+        <div class="directory-preview-mark" aria-hidden="true"></div>
+        <div>
+          <h2 id="directory-preview-title"></h2>
+          <p class="directory-preview-industry"></p>
+        </div>
+      </div>
+      <div class="directory-preview-rule" aria-hidden="true"></div>
+      <p class="directory-preview-location"></p>
+      <p class="directory-preview-description"></p>
+      <p class="directory-preview-disclaimer">This fictional profile is shown only to preview how a member’s business will be presented in the directory.</p>
+      <a class="btn btn-primary directory-preview-cta" href="mailto:info@theproximityclub.com?subject=Business%20Directory%20Interest">Feature Your Business</a>
+    </div>
+  </dialog>
+  <!-- End directory listing preview modal -->
+
+  <footer id="contact" class="site-footer">
+    <div class="footer-shell">
+      <div>
+        <p class="footer-brand">The Proximity Club</p>
+        <p>Where proximity creates opportunity and relationships open the right doors.</p>
+        <div class="social-row" aria-label="Social links">
+          <a href="mailto:info@theproximityclub.com" aria-label="Email" title="Email The Proximity Club"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.4l7 5.2 7-5.2V7H5Zm14 10V9.9l-7 5.2-7-5.2V17h14Z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61591724949559" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Visit The Proximity Club on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.3c-.5-.1-2.2-.3-4.1-.3-4 0-6.7 2.4-6.7 6.9V15H2v4.1h4.2V24h5.1v-4.9h4.2l.7-4.1h-4.9v-3.7C11.3 10.1 11.7 8 14 8Z"/></svg></a>
+          <a href="https://www.instagram.com/theproximityclub?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Visit The Proximity Club on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="https://www.tiktok.com/@theproximityclub?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="Visit The Proximity Club on TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h3.1c.2 1.8 1.3 3.2 3.2 3.6v3.2a8.2 8.2 0 0 1-3.2-1v6.3a6.1 6.1 0 1 1-5.2-6v3.3a2.9 2.9 0 1 0 2.1 2.8V3Z"/></svg></a>
+          <a href="https://www.youtube.com/@TheProximityClub" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="Visit The Proximity Club on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.6 12 4.6 12 4.6s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"/></svg></a>
+        </div>
+      </div>
+      <div><h3>Quick Links</h3><a href="index_fullSite.html#home">Home</a><a href="about.html">About</a><a href="index_fullSite.html#events">Events</a><a href="business-directory.html">Business Directory</a><a href="join.html">Membership</a><a href="contact.html">Contact</a></div>
+      <div><h3>Contact</h3><p>Houston, Texas</p><p><a href="mailto:info@theproximityclub.com">info@theproximityclub.com</a></p></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> The Proximity Club. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
