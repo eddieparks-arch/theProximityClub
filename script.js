@@ -3,6 +3,15 @@ const siteNav = document.querySelector(".site-nav");
 const headerCta = document.querySelector(".header-cta");
 const year = document.querySelector("#year");
 
+const contactSubject = document.querySelector('.contact-form select[name="subject"]');
+
+if (contactSubject) {
+  const requestedSubject = new URLSearchParams(window.location.search).get("subject");
+  const matchingOption = Array.from(contactSubject.options).find((option) => option.value === requestedSubject || option.text === requestedSubject);
+
+  if (matchingOption) contactSubject.value = matchingOption.value || matchingOption.text;
+}
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
