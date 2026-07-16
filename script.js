@@ -49,7 +49,7 @@ const directoryFilters = document.querySelectorAll("[data-directory-filter]");
 const directoryListings = document.querySelectorAll("[data-directory-category]");
 const directorySearch = document.querySelector("#directory-search");
 
-if (directoryFilters.length && directoryListings.length) {
+if (directoryListings.length) {
   let activeDirectoryCategory = "all";
 
   const updateDirectoryResults = () => {

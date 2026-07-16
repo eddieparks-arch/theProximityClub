@@ -2542,7 +2542,7 @@ h3 {
 .founding-card > span { padding: 5px 12px; background: #080b0d; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; font-size: .52rem; }
 
 .directory-listing-section { padding-top: 24px; padding-bottom: 28px; }
-.directory-tools { display: grid; grid-template-columns: minmax(240px,.8fr) 1.7fr; gap: 12px; padding: 9px; border: 1px solid rgba(214,173,103,.35); }
+.directory-tools { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 9px; border: 1px solid rgba(214,173,103,.35); }
 .directory-search { display: flex; align-items: center; gap: 9px; min-height: 40px; padding: 0 12px; border: 1px solid rgba(214,173,103,.3); color: var(--cream); }
 .directory-search > span:first-child { font-size: 1.25rem; }
 .directory-search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--cream); font: inherit; font-size: .72rem; }
