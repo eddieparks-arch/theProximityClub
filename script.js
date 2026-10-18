@@ -122,3 +122,73 @@ if (directoryPreviewModal instanceof HTMLDialogElement) {
     if (event.target === directoryPreviewModal) directoryPreviewModal.close();
   });
 }
+
+
+const calendarList = document.querySelector(".calendar-event-list");
+if (calendarList) {
+  const carousel = calendarList.closest(".calendar-carousel");
+  const todayInHouston = () => {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit"
+    }).formatToParts(new Date());
+    const value = (type) => parts.find((part) => part.type === type).value;
+    return `${value("year")}-${value("month")}-${value("day")}`;
+  };
+  const refreshCalendar = () => {
+    const today = todayInHouston();
+    const cards = [...calendarList.querySelectorAll(".calendar-event-card")];
+    cards.forEach((card) => {
+      card.hidden = card.querySelector("time").dateTime.slice(0, 10) < today;
+    });
+    const hasEvents = cards.some((card) => !card.hidden);
+    calendarList.hidden = !hasEvents;
+    carousel.querySelector(".calendar-no-events").hidden = hasEvents;
+  };
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let lastInteraction = 0;
+  let transitioning = false;
+  const fadeToEvent = async (left) => {
+    if (transitioning) return;
+    if (reducedMotion.matches) {
+      calendarList.scrollTo({ left, behavior: "instant" });
+      return;
+    }
+    transitioning = true;
+    try {
+      await calendarList.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 350, easing: "ease-in-out", fill: "forwards"
+      }).finished.then(() => {
+        calendarList.style.opacity = "0";
+        calendarList.getAnimations().forEach((animation) => animation.cancel());
+      });
+      calendarList.scrollTo({ left, behavior: "instant" });
+      await calendarList.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 550, easing: "ease-in-out"
+      }).finished;
+    } finally {
+      calendarList.style.opacity = "";
+      transitioning = false;
+      }
+  };
+  const moveCalendar = (direction) => fadeToEvent(
+    calendarList.scrollLeft + direction * (calendarList.clientWidth + 20)
+  );
+  ["pointerdown", "wheel", "keydown"].forEach((eventName) => {
+    carousel.addEventListener(eventName, () => { lastInteraction = Date.now(); }, { passive: true });
+  });
+  setInterval(() => {
+    if (reducedMotion.matches || transitioning || document.hidden || carousel.matches(":hover") ||
+        carousel.contains(document.activeElement) || Date.now() - lastInteraction < 8000 ||
+        calendarList.hidden || calendarList.scrollWidth <= calendarList.clientWidth + 1) return;
+    const bounds = carousel.getBoundingClientRect();
+    if (bounds.bottom <= 0 || bounds.top >= window.innerHeight) return;
+    if (calendarList.scrollLeft + calendarList.clientWidth >= calendarList.scrollWidth - 1) {
+      fadeToEvent(0);
+    } else {
+      moveCalendar(1);
+    }
+  }, 6000);
+  document.addEventListener("visibilitychange", refreshCalendar);
+  refreshCalendar();
+  setInterval(refreshCalendar, 60000);
+}
