@@ -3,740 +3,210 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The Proximity Club is a curated professional network in Houston built around meaningful relationships, intentional events, and shared opportunity." />
+  <meta name="description" content="The Proximity Club is a curated professional network built around meaningful relationships, intentional events, and shared opportunity." />
   <meta name="theme-color" content="#03070c" />
-  <title>The Proximity Club | Coming Soon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="assets/site.webmanifest">
-  <style>
-    :root {
-      --navy: #07111f;
-      --navy-soft: #102034;
-      --navy-card: rgba(255, 252, 244, 0.86);
-      --gold: #b58b38;
-      --gold-soft: #c8a24a;
-      --cream: #f8f2e6;
-      --cream-deep: #efe4d0;
-      --ink: #07111f;
-      --muted: rgba(7, 17, 31, 0.68);
-      --line: rgba(181, 139, 56, 0.38);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      min-height: 100%;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: "Inter", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -3;
-      background:
-        radial-gradient(circle at 50% 8%, rgba(181, 139, 56, 0.18), transparent 34%),
-        radial-gradient(circle at 16% 82%, rgba(7, 17, 31, 0.08), transparent 26%),
-        linear-gradient(135deg, #fbf7ee 0%, #f3ead9 52%, #e8dcc6 100%);
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(7, 17, 31, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(7, 17, 31, 0.035) 1px, transparent 1px);
-      background-size: 46px 46px;
-      mask-image: radial-gradient(circle at center, black, transparent 76%);
-    }
-
-    .coming-soon-page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 42px 20px;
-      position: relative;
-    }
-
-    .coming-soon-page::before {
-      content: "";
-      position: absolute;
-      inset: auto 8% 8% 8%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(181, 139, 56, 0.46), transparent);
-    }
-
-    .coming-soon-card {
-      width: min(1040px, 100%);
-      position: relative;
-      text-align: center;
-      padding: clamp(32px, 6vw, 68px);
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 252, 244, 0.9)),
-        var(--navy-card);
-      box-shadow: 0 34px 90px rgba(7, 17, 31, 0.18);
-      overflow: hidden;
-    }
-
-    .coming-soon-card::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border: 1px solid rgba(181, 139, 56, 0.18);
-      border-radius: 22px;
-      pointer-events: none;
-    }
-
-    .logo-wrap {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 14px;
-    }
-
-    .logo {
-      width: clamp(280px, 44vw, 500px);
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 14px 20px rgba(7, 17, 31, 0.12));
-    }
-
-    .eyebrow {
-      position: relative;
-      z-index: 1;
-      margin-bottom: 18px;
-      color: var(--gold-soft);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      line-height: 1.6;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      position: relative;
-      z-index: 1;
-      max-width: 780px;
-      margin: 0 auto 18px;
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(3rem, 7.5vw, 6.2rem);
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 0.95;
-      letter-spacing: -0.045em;
-    }
-
-    h1 span {
-      display: block;
-    }
-
-    h1 .accent {
-      color: var(--gold);
-      font-style: italic;
-      letter-spacing: -0.05em;
-    }
-
-    .status-badge {
-      position: relative;
-      z-index: 2;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin: 2px auto 22px;
-      padding: 11px 20px 12px;
-      border: 1px solid rgba(181, 139, 56, 0.56);
-      border-radius: 999px;
-      color: #fffaf0;
-      background:
-        linear-gradient(135deg, rgba(16, 32, 52, 0.98), rgba(7, 17, 31, 0.98));
-      box-shadow:
-        0 16px 34px rgba(7, 17, 31, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.12);
-      font-size: 0.78rem;
-      font-weight: 900;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .status-badge::before,
-    .status-badge::after {
-      content: "";
-      width: 34px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold-soft));
-    }
-
-    .status-badge::after {
-      background: linear-gradient(90deg, var(--gold-soft), transparent);
-    }
-
-    .status-badge .spark {
-      color: var(--gold-soft);
-      font-size: 0.9rem;
-      line-height: 1;
-      transform: translateY(-1px);
-    }
-
-    .statement {
-      position: relative;
-      z-index: 1;
-      max-width: 640px;
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.12rem);
-      line-height: 1.7;
-      font-weight: 600;
-    }
-
-    .divider {
-      position: relative;
-      z-index: 1;
-      width: 92px;
-      height: 1px;
-      margin: 28px auto;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-
-    .launch-note {
-      position: relative;
-      z-index: 1;
-      width: fit-content;
-      max-width: 100%;
-      margin: 26px auto 0;
-      padding: 10px 16px;
-      border: 1px solid rgba(200, 162, 74, 0.32);
-      border-radius: 999px;
-      color: rgba(247, 241, 227, 0.82);
-      background: rgba(255, 255, 255, 0.035);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .pill {
-      border: 1px solid rgba(200, 162, 74, 0.35);
-      border-radius: 999px;
-      padding: 10px 16px;
-      color: rgba(247, 241, 227, 0.82);
-      background: rgba(255, 255, 255, 0.04);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .event-announcement {
-      position: relative;
-      z-index: 1;
-      width: min(660px, 100%);
-      margin: 24px auto 0;
-      padding: 20px 24px 22px;
-      border: 1px solid rgba(181, 139, 56, 0.42);
-      border-radius: 22px;
-      background:
-        radial-gradient(circle at top left, rgba(181, 139, 56, 0.12), transparent 42%),
-        rgba(255, 255, 255, 0.58);
-      text-align: center;
-      box-shadow: 0 18px 42px rgba(7, 17, 31, 0.08);
-    }
-
-    .event-kicker {
-      margin-bottom: 8px;
-      color: var(--gold);
-      font-size: 0.7rem;
-      font-weight: 900;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
-    .event-announcement h2 {
-      max-width: 560px;
-      margin: 0 auto 10px;
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--ink);
-      font-size: clamp(1.65rem, 3.5vw, 2.45rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-    }
-
-    .event-calendar {
-      margin-top: 20px;
-      text-align: left;
-    }
-
-    .event-calendar-item + .event-calendar-item {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(181, 139, 56, 0.26);
-    }
-
-    .event-calendar-date {
-      color: var(--gold);
-      font-size: 0.85rem;
-      font-weight: 900;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .event-calendar-item h3 {
-      margin: 6px 0 8px;
-      color: var(--ink);
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(1.2rem, 3vw, 1.55rem);
-      line-height: 1.25;
-    }
-
-    .event-calendar-item p {
-      margin: 6px 0;
-      color: rgba(7, 17, 31, 0.75);
-      font-size: 0.94rem;
-      line-height: 1.5;
-    }
-
-    .event-calendar-item .event-calendar-note {
-      font-size: 0.82rem;
-    }
-
-    .event-summary {
-      max-width: 560px;
-      margin: 0 auto 16px;
-      color: rgba(7, 17, 31, 0.66);
-      font-size: 0.94rem;
-      line-height: 1.5;
-      font-weight: 600;
-    }
-
-    .event-details-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 500px;
-      margin: 18px auto 16px;
-      padding: 0;
-      list-style: none;
-      text-align: left;
-    }
-
-    .event-detail {
-      position: relative;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      column-gap: 12px;
-      align-items: start;
-      padding: 11px 14px;
-      border: 1px solid rgba(181, 139, 56, 0.22);
-      border-radius: 16px;
-      background: rgba(255, 252, 244, 0.58);
-    }
-
-    .event-detail-wide {
-      grid-column: 1 / -1;
-    }
-
-    .event-detail::before {
-      content: "✦";
-      grid-row: 1 / span 2;
-      color: var(--gold);
-      font-size: 0.86rem;
-      line-height: 1.2;
-      transform: translateY(2px);
-    }
-
-    .event-detail span {
-      display: block;
-      margin-bottom: 3px;
-      color: rgba(7, 17, 31, 0.52);
-      font-size: 0.66rem;
-      font-weight: 900;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .event-detail strong {
-      display: block;
-      color: var(--ink);
-      font-size: 0.95rem;
-      line-height: 1.32;
-    }
-
-    .event-perks {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(181, 139, 56, 0.26);
-    }
-
-    .event-perks span {
-      border: 1px solid rgba(181, 139, 56, 0.34);
-      border-radius: 999px;
-      padding: 7px 11px;
-      color: rgba(7, 17, 31, 0.74);
-      background: rgba(255, 255, 255, 0.52);
-      font-size: 0.66rem;
-      font-weight: 900;
-      letter-spacing: 0.055em;
-      text-transform: uppercase;
-    }
-
-    .instagram-feature {
-      position: relative;
-      z-index: 1;
-      width: min(520px, 100%);
-      margin: 28px auto 0;
-      padding: 18px;
-      border: 1px solid rgba(181, 139, 56, 0.36);
-      border-radius: 22px;
-      background:
-        linear-gradient(135deg, rgba(181, 139, 56, 0.12), rgba(255, 255, 255, 0.5)),
-        rgba(255, 252, 244, 0.64);
-      box-shadow: 0 18px 42px rgba(7, 17, 31, 0.08);
-    }
-
-    .instagram-feature p {
-      margin-bottom: 12px;
-      color: rgba(7, 17, 31, 0.66);
-      font-size: 0.92rem;
-      line-height: 1.55;
-      font-weight: 600;
-    }
-
-    .instagram-feature-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      min-height: 54px;
-      border-radius: 999px;
-      color: #fffaf0;
-      background: linear-gradient(135deg, #102034, #07111f);
-      border: 1px solid rgba(7, 17, 31, 0.88);
-      font-size: 0.86rem;
-      font-weight: 900;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: transform 180ms ease, box-shadow 180ms ease;
-    }
-
-    .instagram-feature-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(7, 17, 31, 0.18);
-    }
-
-    .instagram-feature-link svg {
-      width: 21px;
-      height: 21px;
-      flex: 0 0 auto;
-      display: block;
-    }
-
-    .actions {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 20px;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-primary {
-      color: #07111f;
-      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
-      border: 1px solid rgba(231, 200, 109, 0.8);
-    }
-
-    .btn-ghost {
-      color: var(--cream);
-      border: 1px solid rgba(247, 241, 227, 0.24);
-      background: rgba(255, 255, 255, 0.035);
-    }
-
-    .footer-note {
-      position: relative;
-      z-index: 1;
-      margin-top: 36px;
-      color: rgba(247, 241, 227, 0.52);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 640px) {
-      .coming-soon-page {
-        min-height: auto;
-        padding: 8px;
-        align-items: flex-start;
-      }
-
-      .coming-soon-card {
-        min-height: auto;
-        display: block;
-        padding: 16px 10px 14px;
-        border-radius: 20px;
-      }
-
-      .coming-soon-card::before {
-        inset: 7px;
-        border-radius: 15px;
-      }
-
-      h1 {
-        letter-spacing: -0.04em;
-      }
-
-      .logo {
-        width: clamp(170px, 58vw, 230px);
-      }
-
-      .logo-wrap {
-        margin-bottom: 6px;
-      }
-
-      .statement {
-        display: none;
-      }
-
-      .status-badge {
-        gap: 6px;
-        margin-bottom: 10px;
-        padding: 7px 11px 8px;
-        font-size: 0.58rem;
-        letter-spacing: 0.1em;
-      }
-
-      .status-badge::before,
-      .status-badge::after {
-        width: 14px;
-      }
-
-      .actions {
-        gap: 10px;
-      }
-
-      .pill,
-      .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      .event-announcement {
-        margin-top: 10px;
-        padding: 12px 10px;
-        border-radius: 16px;
-      }
-
-      .event-kicker {
-        margin-bottom: 5px;
-        font-size: 0.58rem;
-        letter-spacing: 0.14em;
-      }
-
-      .event-announcement h2 {
-        max-width: 310px;
-        font-size: clamp(1.32rem, 6.6vw, 1.65rem);
-        line-height: 1.02;
-        margin-bottom: 7px;
-      }
-
-      .event-summary {
-        display: none;
-      }
-
-      .event-details-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6px;
-        max-width: 100%;
-        margin: 10px auto 9px;
-      }
-
-      .event-detail-wide {
-        grid-column: 1 / -1;
-      }
-
-      .event-detail {
-        column-gap: 8px;
-        padding: 8px 9px;
-        border-radius: 12px;
-      }
-
-      .event-detail::before {
-        font-size: 0.68rem;
-      }
-
-      .event-detail span {
-        margin-bottom: 1px;
-        font-size: 0.55rem;
-        letter-spacing: 0.1em;
-      }
-
-      .event-detail strong {
-        font-size: 0.78rem;
-        line-height: 1.2;
-      }
-
-      .event-perks {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6px;
-        margin-top: 8px;
-        padding-top: 9px;
-      }
-
-      .event-perks span {
-        width: 100%;
-        text-align: center;
-        font-size: 0.52rem;
-        letter-spacing: 0.035em;
-        padding: 6px 6px;
-        line-height: 1.15;
-      }
-
-      .instagram-feature {
-        margin-top: 10px;
-        padding: 10px;
-        border-radius: 16px;
-      }
-
-      .instagram-feature p {
-        margin-bottom: 8px;
-        font-size: 0.78rem;
-        line-height: 1.3;
-      }
-
-      .instagram-feature-link {
-        min-height: 42px;
-        gap: 8px;
-        font-size: 0.66rem;
-        letter-spacing: 0.045em;
-        padding: 0 10px;
-      }
-
-      .instagram-feature-link svg {
-        width: 16px;
-        height: 16px;
-      }
-    }
-  </style>
+  <title>The Proximity Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="coming-soon-page" id="home">
-    <section class="coming-soon-card" aria-labelledby="coming-soon-title">
-      <div class="logo-wrap">
-        <img class="logo" src="assets/TPC_logo.png" alt="The Proximity Club logo" />
+  <header class="site-header">
+    <a class="brand brand-overlap" href="#home" aria-label="The Proximity Club Home">
+      <img class="brand-logo" src="assets/goldLogo.png" alt="The Proximity Club" />
+    </a>
+
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#home" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="#events">Events</a>
+      <a href="business-directory.html">Business Directory</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="join.html">Be in the Proximity</a>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-dark">
+      <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="assets/websiteHomeVideo.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Welcome to</p>
+        <h1><span>The Proximity</span><span>Club</span></h1>
+        <p class="hero-tagline">Where proximity creates opportunity.</p>
+        <p class="hero-copy">A curated network for ambitious professionals, entrepreneurs, and leaders who believe that who you know can take you further than what you know.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="join.html">Be in the Proximity</a>
+        </div>
       </div>
+    </section>
 
-      <div class="status-badge" id="coming-soon-title" aria-label="Coming soon">
-        <span class="spark" aria-hidden="true">✦</span>
-        <span>Website Coming Soon</span>
-        <span class="spark" aria-hidden="true">✦</span>
-      </div>
+    <section id="events" class="events calendar-section section-dark" aria-labelledby="calendar-heading">
+      <div class="section-shell reveal">
+        <div class="calendar-feature-layout">
+          <header class="calendar-header">
+            <p class="eyebrow">Calendar</p>
+            <div class="calendar-heading-rule" aria-hidden="true"><span></span></div>
+            <h2 id="calendar-heading">Upcoming Experiences</h2>
+            <p>We gather with purpose. From intimate networking mixers to member roundtables, every event is designed to create meaningful connections.</p>
+          </header>
 
-      <p class="statement">
-        We are building a new Houston-based professional community centered on meaningful connections,
-        elevated experiences, and the right rooms with the right people.
-      </p>
+          <div class="calendar-carousel">
+            <div class="calendar-event-list" tabindex="0" role="region" aria-label="Upcoming events">
+              <article class="calendar-event-card">
+                <div class="calendar-date">
+                  <p class="calendar-event-label">Save the Date</p>
+                  <div class="calendar-date-rule" aria-hidden="true"></div>
+                  <time datetime="2026-10-24">
+                    <span class="calendar-month">Oct</span>
+                    <span class="calendar-day">24</span>
+                  </time>
+                </div>
+                <div class="calendar-event-details">
+                  <h3>TSU Homecoming Tailgate<br />Experience with TPC</h3>
+                  <div class="calendar-event-meta">
+                    <p>TSU Campus, behind Student Center (near solar panels)</p>
+                    <p>12:30 PM – 6:30 PM</p>
+                    <p>$30 All-You-Can-Eat · Bring your own chair</p>
+                  </div>
+                  <a class="calendar-event-cta" href="https://www.eventbrite.com/e/tsu-homecoming-tailgate-experience-with-tpc-tickets-2002488843035" target="_blank" rel="noopener noreferrer">Get Tickets <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
 
-      <section class="event-announcement" aria-labelledby="event-title">
-        <p class="event-kicker">Save the Dates · 2026</p>
-        <h2 id="event-title">Upcoming Events</h2>
-        <div class="event-calendar">
-          <article class="event-calendar-item" aria-labelledby="mixer-title">
-            <time class="event-calendar-date" datetime="2026-10-15">October 15</time>
-            <h3 id="mixer-title">Networking Mixer @Privilege</h3>
-            <p>Connect &amp; Elevate</p>
-            <p class="event-calendar-note">More details coming soon.</p>
+              <article class="calendar-event-card">
+                <div class="calendar-date">
+                  <p class="calendar-event-label">Save the Date</p>
+                  <div class="calendar-date-rule" aria-hidden="true"></div>
+                  <time datetime="2026-11-12">
+                    <span class="calendar-month">Nov</span>
+                    <span class="calendar-day">12</span>
+                  </time>
+                </div>
+                <div class="calendar-event-details">
+                  <h3>“Man to Man”</h3>
+                  <div class="calendar-event-meta">
+                    <p>An honest conversation about mental health and fatherhood.</p>
+                    <p>Dialogue on Wellbeing</p>
+                    <p>More details coming soon.</p>
+                  </div>
+                </div>
+              </article>
+
+              <article class="calendar-event-card">
+                <div class="calendar-date">
+                  <p class="calendar-event-label">Save the Date</p>
+                  <div class="calendar-date-rule" aria-hidden="true"></div>
+                  <time datetime="2026-12-18">
+                    <span class="calendar-month">Dec</span>
+                    <span class="calendar-day">18</span>
+                  </time>
+                </div>
+                <div class="calendar-event-details">
+                  <h3>The Inaugural Legacy &amp; Light Scholarship Soiree</h3>
+                  <div class="calendar-event-meta">
+                    <p>A celebratory evening to invest in the potential of our future leaders.</p>
+                    <p>A formal evening of community, inspiration, and fundraising.</p>
+                    <p>Details and official invitations to follow.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <p class="calendar-no-events" hidden>More experiences coming soon. Stay connected for announcements.</p>
+          </div>
+        </div>
+
+        <div class="calendar-experience-divider" aria-hidden="true"><span></span></div>
+
+        <div class="calendar-experiences" aria-label="Types of experiences">
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="16" cy="16" r="5"/><circle cx="32" cy="16" r="5"/><circle cx="24" cy="11" r="5"/><path d="M7 35v-8c0-4 4-7 9-7m25 15v-8c0-4-4-7-9-7M14 38V27c0-5 4-8 10-8s10 3 10 8v11Z"/></svg>
+            </div>
+            <div>
+              <h3>Networking Mixers</h3>
+              <p>Meaningful connections that drive opportunity.</p>
+            </div>
           </article>
-          <article class="event-calendar-item" aria-labelledby="tailgate-title">
-            <time class="event-calendar-date" datetime="2026-10-24">October 24</time>
-            <h3 id="tailgate-title">TSU Homecoming Tailgate Experience with TPC</h3>
-            <ul class="event-details-list" aria-label="Tailgate details">
-              <li class="event-detail event-detail-wide">
-                <span>Location</span>
-                <strong>TSU Campus, behind Student Center (near solar panels)</strong>
-              </li>
-              <li class="event-detail">
-                <span>Time</span>
-                <strong>12:30 PM – 6:30 PM</strong>
-              </li>
-              <li class="event-detail">
-                <span>Food</span>
-                <strong>$30 All-You-Can-Eat</strong>
-              </li>
-            </ul>
-            <p>Bring your own chair.</p>
+
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="13" cy="15" r="4"/><circle cx="35" cy="15" r="4"/><circle cx="24" cy="11" r="5"/><path d="M6 32v-7c0-4 3-6 7-6m29 13v-7c0-4-3-6-7-6M15 27c0-5 4-8 9-8s9 3 9 8v9H15Z"/><ellipse cx="24" cy="33" rx="14" ry="5"/></svg>
+            </div>
+            <div>
+              <h3>Executive Roundtables</h3>
+              <p>Peer-to-peer conversations on what matters most.</p>
+            </div>
           </article>
-          <article class="event-calendar-item" aria-labelledby="conversation-title">
-            <time class="event-calendar-date" datetime="2026-11-12">November 12</time>
-            <h3 id="conversation-title">“Man to Man”</h3>
-            <p>An honest conversation about mental health and fatherhood.</p>
-            <p>Dialogue on Wellbeing</p>
-            <p class="event-calendar-note">More details coming soon.</p>
+
+          <article>
+            <div class="calendar-experience-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="m5 19 19-11 19 11H5Zm4 20h30M12 22v13m8-13v13m8-13v13m8-13v13M7 19h34v4H7Z"/></svg>
+            </div>
+            <div>
+              <h3>Community Experiences</h3>
+              <p>Gatherings that strengthen business and our community.</p>
+            </div>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <div class="instagram-feature">
-        <p>Follow our Instagram for event updates, announcements, and the latest details on The Proximity Club.</p>
-        <a class="instagram-feature-link" href="https://www.instagram.com/theproximityclub/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" aria-label="Follow The Proximity Club on Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path fill="currentColor" d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7.25A4.75 4.75 0 1 1 12 16.75 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 12 14.75 2.75 2.75 0 0 0 12 9.25Zm5.1-2.35a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0Z" />
-          </svg>
-          <span>Follow @theproximityclub</span>
-        </a>
-      </div>   
+    <section id="membership" class="membership-band community-band">
+      <div class="section-shell inclusion-layout reveal">
+        <div class="inclusion-intro">
+          <p class="eyebrow">Our Community</p>
+          <h2>Built on Real Connections. <span>Strengthened by Different Perspectives.</span></h2>
+          <p>The Proximity Club is a welcoming community of professionals from different industries, backgrounds, and experiences—brought together by a shared belief in meaningful relationships.</p>
+        </div>
+
+        <div class="inclusion-principles" aria-label="Our community principles">
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="18" cy="17" r="6"/><circle cx="30" cy="17" r="6"/><path d="M8 35c1.5-5.2 6.3-8 12-8s10.5 2.8 12 8"/><path d="M18 30c1.4 1.6 4.1 2.7 6 2.7s4.6-1.1 6-2.7"/></svg>
+            </span>
+            <h3>Authentic Relationships</h3>
+            <p>We value meaningful introductions and relationship-building over broadcasts and noise.</p>
+          </article>
+
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 18h28v18H10z"/><path d="M16 18V10h16v8M18 26h12"/></svg>
+            </span>
+            <h3>Intentional Access</h3>
+            <p>We create access to people, opportunities, and rooms that are hard to find elsewhere.</p>
+          </article>
+
+          <article class="inclusion-card">
+            <span class="inclusion-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="20" r="8"/><path d="M10 36c1.8-6.1 7.4-9 14-9s12.2 2.9 14 9"/></svg>
+            </span>
+            <h3>Open Exchange</h3>
+            <p>We believe in thoughtful collaboration, shared growth, and learning from different perspectives.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="join-band">
+      <div class="section-shell join-layout reveal">
+        <div>
+          <p class="eyebrow">Join the Club</p>
+          <h2>Build your circle. Elevate your next chapter.</h2>
+        </div>
+        <a class="btn btn-primary" href="join.html">Apply to Join</a>
+      </div>
     </section>
   </main>
 </body>
